@@ -6,14 +6,6 @@ import { useSelector , useDispatch } from 'react-redux';
 import {listProducts} from '../actions/productActions';
 
 
-
-
-
-
-
-
-
-
 function HomeScreen(props) {
   const productList = useSelector (state => state.productList);
   const { products, loading, error} = productList;
