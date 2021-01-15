@@ -36,12 +36,12 @@ function App() {
     <aside className="sidebar">
         <h3>Shopping categories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-        <ul>
+        <ul className= "slidebar-bullet">
             <li>
-                 <a href="index.html">Throusers</a>
-            </li>
-            <li>
-                <a href="index.html">Shirts</a>
+            <button className="button-slidebar"><b><a  href="index.html">Slim-fit</a></b></button>
+            <button className="button-slidebar"><b><a  href="index.html">Classic</a></b></button>
+            <button className="button-slidebar"><b><a  href="index.html">Casual</a></b></button>
+            <button className="button-slidebar"><b><a  href="index.html">Traditional</a></b></button>
             </li>
         </ul>
     </aside>
