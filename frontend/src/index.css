@@ -27,7 +27,7 @@ a{
 .header{
   grid-area: header; 
   background-color: #203040;
-  color: #ffffff;  
+  color: #cccccc;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,9 +40,17 @@ a{
   text-decoration: none;
 }
 .header-links a{
-   color: #ffffff;
+   color: #ece3e3;
    text-decoration: none;
    padding: 0.5rem;
+}
+.gents-house{
+  background-color: #203040;
+  font-size: 2rem #ece3e3;
+  border: none;
+
+
+
 }
 .header-links a:hover{
   color: #ff8000;
@@ -121,7 +129,7 @@ a:hover{
   color: #ffffff;
   cursor: pointer;
 }
-.sidebar{
+/* .sidebar{
   position: fixed;
   transition: all 0.65s;
   transform: translateX(-30rem);
@@ -162,11 +170,13 @@ a:hover{
   padding: 0%;
   cursor: pointer;
   background-color: #1b88a3;
-}
+} */
 
 
 
 /*product details*/
+
+
 
 .details{
   display: flex;
@@ -182,6 +192,9 @@ a:hover{
 .details-image img{
   max-width: 60rem;
   widows : 100%;
+  border: solid 1px #203040;
+  padding: 10px;
+  border-radius: 3rem;
 
 }
 .details-action{
