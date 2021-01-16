@@ -1,0 +1,8 @@
+POST  http://localhost:5000/api/users/createadmin
+Content-Type: application/json
+
+{
+    "name":"Thilini"  ,
+    "email":"thilipiyumika@gmail.com", 
+   " password":"1234",
+}

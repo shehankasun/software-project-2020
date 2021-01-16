@@ -4,14 +4,8 @@ import ProductScreen from './ProductScreen';
 import axios from 'axios';
 import { useSelector , useDispatch } from 'react-redux';
 import {listProducts} from '../actions/productActions';
-
-
-
-
-
-
-
-
+import Slideshow from '../slideshow';
+import SigninScreen from './SigninScreen';
 
 
 function HomeScreen(props) {
@@ -21,7 +15,7 @@ function HomeScreen(props) {
   useEffect(() => {
     dispatch(listProducts());
 
-  
+    <div><Slideshow/></div>
     return () => {
       //
     };
@@ -29,14 +23,16 @@ function HomeScreen(props) {
     
     return loading ? <div>Loading...</div>:
     error? <div>{error}</div>:
+    
     <ul className="products">
     {
+      
        products && products.map(product =>
         <li key={product._id}>
         <div className="product">
         <Link to={'/product/' + product._id}>{<img className="product-image" src={product.image} alt="product"></img>}</Link>
         <Route path="/product" exact={true} component={ProductScreen}/>
-          
+        <Route path="/signin" exact={true} component={SigninScreen}/>
           
             <div className="product-name">
                <Link to={'/product/' + product._id}>{product.name}</Link>
@@ -51,9 +47,10 @@ function HomeScreen(props) {
     }
 
   </ul> 
+
   
 
 }
 
-<div>HomeScreen</div>
+
 export default HomeScreen;

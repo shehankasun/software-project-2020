@@ -13,7 +13,7 @@ export default   {
     {
         _id:'2',
         name :'Slim Shirt',
-        image: '/images/d2.jpg',
+        image: '/images/d1.jpg',
         price:1200,
         brand: 'Nike',
         rating: 4.5,
