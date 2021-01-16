@@ -10,6 +10,10 @@ body{
 #root{
   height: 100%;
 }
+
+a{
+  text-decoration: none;
+}
 .grid-container{
   display: grid;
   grid-template-areas: 
@@ -23,7 +27,7 @@ body{
 .header{
   grid-area: header; 
   background-color: #203040;
-  color: #ffffff;  
+  color: #cccccc;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,9 +40,17 @@ body{
   text-decoration: none;
 }
 .header-links a{
-   color: #ffffff;
+   color: #ece3e3;
    text-decoration: none;
    padding: 0.5rem;
+}
+.gents-house{
+  background-color: #203040;
+  font-size: 2rem #ece3e3;
+  border: none;
+
+
+
 }
 .header-links a:hover{
   color: #ff8000;
@@ -61,6 +73,7 @@ body{
   bottom: 0;
   position: static;
 }
+
 a{
   text-decoration: none;
 }
@@ -118,7 +131,7 @@ a:hover{
   color: #ffffff;
   cursor: pointer;
 }
-.sidebar{
+/* .sidebar{
   position: fixed;
   justify-content: center;
   transition: all 0.65s;
@@ -126,9 +139,18 @@ a:hover{
   width: 30rem;
   background-color: #010b47;
   height: 100%;
+<<<<<<< HEAD
   align-items: center;
   
+=======
+  background-color: #47abee;
+>>>>>>> 783183d4b2a9fdeb6a55853d19e2e4c82726f5c0
 }
+
+.slidebar-bullet{
+  list-style-type: none;
+}
+
 .sidebar.open{
   transform: translateX(0);
 }
@@ -145,9 +167,24 @@ a:hover{
   right: 0.5rem;
   top: 1.5rem;
 }
+.button-slidebar{
+  list-style-type: none;
+  border: 0.1rem #000000 solid;
+  width: 37rem;
+  transform: translateX(-11rem);
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  padding: 0%;
+  cursor: pointer;
+  background-color: #1b88a3;
+} */
+
 
 
 /*product details*/
+
+
 
 .details{
   display: flex;
@@ -163,6 +200,9 @@ a:hover{
 .details-image img{
   max-width: 60rem;
   widows : 100%;
+  border: solid 1px #203040;
+  padding: 10px;
+  border-radius: 3rem;
 
 }
 .details-action{
