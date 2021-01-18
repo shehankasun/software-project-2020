@@ -1,50 +1,36 @@
 import express from 'express';
-import User from '../models/userModel';
-const router = express.Router();
+var {User} = require('../models/userModel');
+var router = express.Router();
 
-router.post('/signin', async (req, res) => {
 
-    const signinUser = await User.findOne({
-
-        email: req.body.email,
-        password: req.body.password
+router.post('/',(req,res)=>{
+    var newuser = new User({
+        email : req.body.email,
+        password : req.body.password,
+        
     });
-    if(signinUser){
-        res.send({
-            _id: signinUser.id,
-            name: signinUser.name,
-            email: signinUser.email,
-            isAdmin: signinUser.isAdmin,
-            token: getToken(user)
-        })
+    newuser.save((err,docs)=>{
+        if(!err){res.send(docs);}
+        else{ console.log('Errore in Customer saving Data : '+JSON.stringify(err,undefined,2));}
 
-    }else{
-        res.status(401).send({msg:'Invalid Email or Password.'});
-    }
-
-})
-
-router.post('/signin',async (req, res) =>{
-    const signinUser = await User.findOne({
-        email: req.body.email,
-        password: req.body.password
-    })
+    });
 });
 
 
-router.get("/createadmin", async (req, res) => {
-    try {
-        const user = new User ({
-    name:'Thilini',
-    email:'thilipiyumika@gmail.com', 
-    password:'1234',
-    isAdmin: true
-});
-const newUser = await user.save();
-res.send(newUser) ;
-    }catch (error) {
-        res.send({mmsg: error.message });
-    }
-});
 
+
+
+router.get('/',(req,res)=>{
+    console.log("FInish")
+    req.find((err,docs)=>{
+        if(!err){
+            console.log("FInish")
+            req.send(docs);
+            console.log("FInish")
+        }
+        else{ console.log('Errore in Retriving Customer: ');}
+
+    });
+
+});
 export default router;

@@ -27,18 +27,7 @@ function App() {
        
 
     </header>
-    {/* <aside className="sidebar">
-        <h2>Shopping categories</h2>
-       
-        <ul>
-            <li>
-                 <a href="index.html"><h3>Throusers</h3></a>
-            </li>
-            <li>
-                <a href="index.html"><h3>Shirts</h3></a>
-            </li>
-        </ul>
-    </aside> */}
+    
     <main className="main">
         <div className="content">
           <Route path="/signin" component={SigninScreen} />
